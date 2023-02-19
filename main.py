@@ -27,7 +27,20 @@ def find_mismatch(text):
 
 
 def main():
-    text = input()
+    textc = input()
+    if textc.upper() == "F":
+        file_name = input()
+        if not os.path.isfile(file_name):
+            print("Error")
+            return
+        with open(file_name, 'r') as f:
+            text = f.read()
+        elif input_choice.upper() == "I":
+            text = input():
+        else:
+            print("Error")
+            return
+        
     mismatch = find_mismatch(text)
     # Printing answer, write your code here
     if mismatch == "Success":
