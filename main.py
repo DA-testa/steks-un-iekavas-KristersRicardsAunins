@@ -22,7 +22,7 @@ def find_mismatch(text):
 
 
 def main():
-    text = input() + "IF"
+    text = input() + "I" + "F"
     mismatch = find_mismatch(text)
     # Printing answer, write your code here
     if mismatch == "Success":
