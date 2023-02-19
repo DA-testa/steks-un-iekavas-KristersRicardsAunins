@@ -18,10 +18,6 @@ def find_mismatch(text):
                 return index + 1
             return "Success"
         
-def main():
     text = input()
     for i in text:
         print(find_mismatch(i))
-        
-if __name__ == "__main__":
-    main()
