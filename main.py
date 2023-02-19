@@ -33,13 +33,14 @@ def main():
         elif vai == "F":
             fails = input()
             if os.path.exists(fails):
-                with open(fails) as f:
-                    text = f.read()
+                with open(fails) as i:
+                    text = i.read()
                 break
             else:
                 print()
         else:
             print()
+            
     mismatch = find_mismatch(text)
     # Printing answer, write your code here
     if mismatch == "Success":
