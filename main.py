@@ -1,11 +1,15 @@
 # python3
 
+
 from collections import namedtuple
+
 
 Bracket = namedtuple("Bracket", ["char", "position"])
 
+
 def are_matching(left, right):
     return (left + right) in ["()", "[]", "{}"]
+
 
 def find_mismatch(text):
     opening_brackets_stack = []
@@ -21,6 +25,7 @@ def find_mismatch(text):
     return "Success"
 
 
+
 def main():
     text = input()
     mismatch = find_mismatch(text)
@@ -29,6 +34,7 @@ def main():
         print("Success")
     else:
         print(mismatch)
+        
 
 if __name__ == "__main__":
     main()
