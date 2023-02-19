@@ -3,6 +3,7 @@
 
 from collections import namedtuple
 
+import os
 
 Bracket = namedtuple("Bracket", ["char", "position"])
 
@@ -16,7 +17,7 @@ def find_mismatch(text):
     for i, next in enumerate(text):
         if next in "([{":
             opening_brackets_stack.append(Bracket(next, i))
-        if next in ")]}":
+        elif next in ")]}":
             if not opening_brackets_stack or not are_matching(opening_brackets_stack[-1].char, next):
                 return i + 1
             opening_brackets_stack.pop()
@@ -27,25 +28,27 @@ def find_mismatch(text):
 
 
 def main():
-    textc = input()
-    if textc.upper() == "F":
-        file_name = input()
-        if not os.path.isfile(file_name):
-            print("Error")
-            return
-        with open(file_name, 'r') as f:
-            text = f.read()
-        elif input_choice.upper() == "I":
-            text = input():
+    
+    while True:
+        vai = input().strip().upper()
+        if vai == "I":
+            iekavas = input()
+            break
+        elif vai == "F":
+            fails = input()
+            if os.path.exists(fails):
+                with open(fails) as i:
+                    iekavas = i.read()
+                break
+            else:
+                print("wrong file")
         else:
-            print("Error")
-            return
-        
+            print("wrong input format")
     mismatch = find_mismatch(text)
     # Printing answer, write your code here
     #if mismatch == "Success":
         #print("Success")
-   # else:
+    #else:
         #print(mismatch)
         
 
