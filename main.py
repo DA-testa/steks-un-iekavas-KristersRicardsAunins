@@ -23,20 +23,12 @@ def find_mismatch(text):
 
 def main():
     text = input()
-    if text[-2:] == "IF":
-        text = text[:-2]
     mismatch = find_mismatch(text)
-    
-    if mismatch == "Success"
+    # Printing answer, write your code here
+    if mismatch == "Success":
         print("Success")
     else:
         print(mismatch)
-    #mismatch = find_mismatch(text)
-    # Printing answer, write your code here
-    #if mismatch == "Success":
-       # print("Success")
-   # else:
-       # print(mismatch)
 
 if __name__ == "__main__":
     main()
