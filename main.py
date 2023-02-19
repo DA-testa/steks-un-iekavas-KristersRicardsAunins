@@ -17,12 +17,12 @@ def find_mismatch(text):
                 return i + 1
             opening_brackets_stack.pop()
     if opening_brackets_stack:
-        return opening_brackets_stack[0].position + 1
+        return opening_brackets_stack[-1].position + 1
     return "Success"
 
 
 def main():
-    text = input() + "I" + "F"
+    text = input()
     mismatch = find_mismatch(text)
     # Printing answer, write your code here
     if mismatch == "Success":
