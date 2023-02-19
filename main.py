@@ -24,7 +24,6 @@ def find_mismatch(text):
     return "Success"
 
 
-
 def main():
     while True:
         vai = input("I/F").strip().upper()
