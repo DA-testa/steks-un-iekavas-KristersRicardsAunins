@@ -26,26 +26,26 @@ def find_mismatch(text):
 
 def main():
     while True:
-        vai = input("I/F").strip().upper()
+        vai = input().strip().upper()
         if vai == "I":
-            text = input("Iekavas: ")
+            text = input()
             break
         elif vai == "F":
-            fails = input("Fails: ")
+            fails = input()
             if os.path.exists(fails):
                 with open(fails) as f:
                     text = f.read()
                 break
             else:
-                print("wrong file")
+                print()
         else:
-            print("wrong input format")
+            print()
     mismatch = find_mismatch(text)
     # Printing answer, write your code here
-    #if mismatch == "Success":
-        #print("Success")
-    #else:
-        #print(mismatch)
+    if mismatch == "Success":
+        print("Success")
+    else:
+        print(mismatch)
         
 
 if __name__ == "__main__":
