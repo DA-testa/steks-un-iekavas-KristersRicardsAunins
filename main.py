@@ -2,9 +2,7 @@
 
 
 from collections import namedtuple
-
 import os
-
 Bracket = namedtuple("Bracket", ["char", "position"])
 
 
@@ -12,9 +10,9 @@ def are_matching(left, right):
     return (left + right) in ["()", "[]", "{}"]
 
 
-def find_mismatch(text):
+def find_mismatch(iekavas):
     opening_brackets_stack = []
-    for i, next in enumerate(text):
+    for i, next in enumerate(iekavas):
         if next in "([{":
             opening_brackets_stack.append(Bracket(next, i))
         elif next in ")]}":
