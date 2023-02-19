@@ -44,7 +44,7 @@ def main():
                 print("wrong file")
         else:
             print("wrong input format")
-    mismatch = find_mismatch(text)
+    mismatch = find_mismatch(iekavas)
     # Printing answer, write your code here
     #if mismatch == "Success":
         #print("Success")
